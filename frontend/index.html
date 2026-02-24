@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Management SPA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8 font-sans">
+    <div class="max-w-5xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h1 class="text-3xl font-bold mb-6 text-gray-800">Client Management</h1>
 
+        <form id="clientForm" class="mb-8 bg-gray-50 p-4 rounded border">
+            <h2 class="text-xl font-semibold mb-4">Add New Client</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input type="number" id="clientId" placeholder="Client ID (e.g., 1)" class="border p-2 rounded w-full" required>
+                <input type="text" id="clientName" placeholder="Company Name" class="border p-2 rounded w-full" required>
+                <input type="text" id="contactName" placeholder="Contact Name" class="border p-2 rounded w-full" required>
+                <input type="text" id="phone" placeholder="Phone Number" class="border p-2 rounded w-full" required>
+            </div>
+            <button type="submit" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Save Client</button>
+        </form>
+
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-gray-800 text-white">
+                        <th class="p-3 border">ID</th>
+                        <th class="p-3 border">Name</th>
+                        <th class="p-3 border">Contact</th>
+                        <th class="p-3 border">Phone</th>
+                        <th class="p-3 border text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="clientTableBody" class="text-gray-700">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
